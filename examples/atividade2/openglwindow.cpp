@@ -194,7 +194,7 @@ void OpenGLWindow::paintGL() {
 
   // Draw BODY
   glUniform4f(colorLoc, bodyColor[0], bodyColor[1], bodyColor[2], bodyColor[3]);  // set current selected body color to frag
-  m_vertices_ToDraw = 11460; // set limit of body vertices
+  m_vertices_ToDraw = m_indices.size(); // set limit of body vertices
   glDrawElements(GL_TRIANGLES, m_vertices_ToDraw, GL_UNSIGNED_INT, nullptr); // draw body vertices starting vertices vector in 0
 
   glBindVertexArray(0);
